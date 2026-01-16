@@ -108,7 +108,7 @@ const wantedKinds: Record<ReflectionKind, ts.SyntaxKind[]> = {
     [ReflectionKind.SetSignature]: [ts.SyntaxKind.SetAccessor],
     [ReflectionKind.TypeAlias]: [
         ts.SyntaxKind.TypeAliasDeclaration,
-        ts.SyntaxKind.FunctionDeclaration, // type only exports
+        // ts.SyntaxKind.FunctionDeclaration, // type only exports
         // Intentionally not included to avoid comments being copied for variable/alias combos
         // ts.SyntaxKind.VariableDeclaration,
     ],
