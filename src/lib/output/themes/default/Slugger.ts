@@ -24,7 +24,7 @@ export class Slugger {
                 // remove unwanted chars
                 .replace(
                     /[\u2000-\u206F\u2E00-\u2E7F\\'!"#$%&()*+,./:;<=>?@[\]^`{|}~]/g,
-                    "",
+                    " ",
                 )
                 // change whitespace to dash
                 .replace(/\s/g, "-")
