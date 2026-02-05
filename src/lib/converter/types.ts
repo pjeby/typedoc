@@ -820,8 +820,7 @@ const referenceConverter: TypeConverter<
             context,
             name,
         );
-
-        if (type.flags & ts.TypeFlags.Substitution) {
+        if (type.flags & ts.TypeFlags.Substitution && ref.name === "NoInfer" && ref.package === "typescript") {
             // NoInfer<T>
             ref.typeArguments = [
                 convertType(context, (type as ts.SubstitutionType).baseType),
